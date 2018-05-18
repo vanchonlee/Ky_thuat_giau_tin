@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../LSB/.idea/LSB.iml" filepath="$PROJECT_DIR$/../LSB/.idea/LSB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/audiowater.iml" filepath="$PROJECT_DIR$/.idea/audiowater.iml" />
+    </modules>
+  </component>
+</project>
