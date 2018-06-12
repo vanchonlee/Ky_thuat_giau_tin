@@ -1,0 +1,91 @@
+$res_319 : "only screen and (max-width: 320px)";
+$res_320 : "only screen and (min-width: 320px) and (max-width: 374px)";
+$res_375 : "only screen and (min-width: 375px) and (max-width: 424px)";
+$res_425 : "only screen and (min-width: 425px) and (max-width: 767px)";
+$res_768 : "only screen and (min-width: 768px) and (max-width: 991px)";
+$res_992 : "only screen and (min-width: 992px) and (max-width: 1023px)";
+$res_1024 : "only screen and (min-width: 1024px) and (max-width: 1999px)";
+$res_1200 : "only screen and (min-width: 1200px)";
+
+
+@mixin responsive_319() {
+  @media #{$res_319} {
+    @content
+  }
+}
+
+@mixin responsive_320() {
+  @media #{$res_320} {
+    @content
+  }
+}
+@mixin responsive_375() {
+  @media #{$res_375} {
+    @content;
+  }
+}
+@mixin responsive_425() {
+  @media #{$res_425} {
+    @content;
+  }
+}
+@mixin responsive_768() {
+  @media #{$res_768} {
+    @content;
+  }
+}
+@mixin responsive_992() {
+  @media #{$res_992} {
+    @content;
+  }
+}
+@mixin responsive_1024() {
+  @media #{$res_1024} {
+    @content;
+  }
+}
+@mixin responsive_1200() {
+  @media #{$res_1200} {
+    @content;
+  }
+}
+
+@include responsive_319{
+  header{
+    display: none;
+  }
+}
+
+@include responsive_320{
+  header{
+    display: none;
+  }
+}
+
+@include responsive_375{
+  header{
+    display: none;
+  }
+}
+
+@include responsive_425{
+  header{
+    display: none;
+  }
+}
+
+@include responsive_768{
+
+}
+
+@include responsive_992{
+
+}
+
+@include responsive_1024{
+
+}
+
+@include responsive_1200{
+
+}

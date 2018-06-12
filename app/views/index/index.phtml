@@ -1,0 +1,41 @@
+<div id="root-index" class="row">
+    <div class="col-md-12">
+        <table class="table res-table-index">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php $dem = 1?>
+            <?php foreach ($data as $data1):?>
+                <tr>
+                    <th scope="row"><?php echo $dem++?></th>
+                    <td><?php echo $data1->name?></td>
+                    <td>
+                        <audio controls="controls">
+                            <source src="https://docs.google.com/uc?export=download&id=<?php echo $data1->id?>">
+                        </audio>
+                    </td>
+                    <td><?php echo $data1->signature?></td>
+                    <td>
+                        <form method="post" action="/newstock/admin/active">
+                            <button value=<?php echo $data1->id?> type="submit" name="active" class="btn">Active</button>
+                        </form>
+                    </td>
+                </tr>
+            <?php endforeach ?>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<style scoped>
+    table{
+        margin-top: 50px;
+    }
+</style>

@@ -1,0 +1,45 @@
+<div id="root-index" class="row">
+    <div class="col-md-12">
+        <table class="table res-table-index">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">File</th>
+                <th scope="col">Signature</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($data as $data1):?>
+                <tr>
+                    <th scope="row">1</th>
+                    <td><?php echo $data1->name?></td>
+                    <td>
+                        <audio controls="controls">
+                            <source src="https://docs.google.com/uc?export=download&id=<?php echo $data1->id?>">
+                        </audio>
+                    </td>
+                    <td><?php echo $data1->signature?></td>
+                    <td>
+                        <form method="post" action="/newstock/admin/action">
+                            <button value=<?php echo $data1->id?> type="submit" name="btn_delete" class="btn">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            <?php endforeach ?>
+            </tbody>
+        </table>
+        <div>
+            <form method="post" action="/newstock/admin/upload" enctype="multipart/form-data">
+                <input type="file" name="fileToUpload" class="btn"/>
+                <button type="submit" class="btn">Upload</button>
+            </form>
+        </div>
+    </div>
+</div>
+<style scoped="">
+    #root-index{
+        margin-top: 20px;
+    }
+</style>
